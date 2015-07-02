@@ -15,17 +15,17 @@ Which starting number, under one million, produces the longest chain?
 
 NOTE: Once the chain starts the terms are allowed to go above one million.
 
-!!!HASH TABLE!!!
+HASH TABLE!!!
 """
 
 def exec_time(func):
     import time
     def newFunc(*args, **args2):
         t0 = time.time()
-        print "@%s, {%s} start" % (time.strftime("%X", time.localtime()), func.__name__)
+        print "%s, {%s} start" % (time.strftime("%X", time.localtime()), func.__name__)
         back = func(*args, **args2)
-        print "@%s, {%s} end" % (time.strftime("%X", time.localtime()), func.__name__)
-        print "@%.3fs taken for {%s}" % (time.time() - t0, func.__name__)
+        print "%s, {%s} end" % (time.strftime("%X", time.localtime()), func.__name__)
+        print "%.3fs taken for {%s}" % (time.time() - t0, func.__name__)
         return back
     return newFunc
 
@@ -54,9 +54,6 @@ class Collatz_seq:
     def get_sum(self):
         return self.sum
 
-    def set_sum(self, sum):
-        self.sum = sum
-
     def get_n(self):
         return self.n
 
@@ -71,17 +68,10 @@ def find_max_Collatz_seq(n=13):
     cs = Collatz_seq()
     cs_max = 0
     cs_number = 0
-    cs_dict = {}
-    for i in range(2, n):
+    for i in range(n, 0, -1):
         cs.set_n(i)
         while not cs.is_term():
             cs.next()
-            if cs_dict.has_key(cs.get_n()):
-                cs.set_sum(cs.get_sum() + cs_dict[cs.get_n()])
-                break
-        if cs.is_term():
-            cs_dict[i] = cs.get_sum()
-
         if cs.get_sum() > cs_max:
             cs_max = cs.get_sum()
             cs_number = i
