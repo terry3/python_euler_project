@@ -1,0 +1,91 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+The following iterative sequence is defined for the set of positive integers:
+
+n → n/2 (n is even)
+n → 3n + 1 (n is odd)
+
+Using the rule above and starting with 13, we generate the following sequence:
+13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+
+It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
+
+Which starting number, under one million, produces the longest chain?
+
+NOTE: Once the chain starts the terms are allowed to go above one million.
+
+!!!HASH TABLE!!!
+"""
+
+def exec_time(func):
+    import time
+    def newFunc(*args, **args2):
+        t0 = time.time()
+        print "@%s, {%s} start" % (time.strftime("%X", time.localtime()), func.__name__)
+        back = func(*args, **args2)
+        print "@%s, {%s} end" % (time.strftime("%X", time.localtime()), func.__name__)
+        print "@%.3fs taken for {%s}" % (time.time() - t0, func.__name__)
+        return back
+    return newFunc
+
+class Collatz_seq:
+    def __init__(self):
+        self.n = 0
+        self.sum = 1
+
+    def next(self):
+        # print self.n
+        if self.is_even():
+            self.n = self.n / 2
+        else:
+            self.n = 3 * self.n + 1
+        self.sum += 1
+
+    def is_term(self):
+        if self.n == 1:
+            return True
+        return False
+
+    def set_n(self, n):
+        self.n = n
+        self.sum = 1
+
+    def get_sum(self):
+        return self.sum
+
+    def set_sum(self, sum):
+        self.sum = sum
+
+    def get_n(self):
+        return self.n
+
+    def is_even(self):
+        return self.n % 2 == 0
+
+    def is_odd(self):
+        return self.n % 2 != 0
+
+@exec_time
+def find_max_Collatz_seq(n=13):
+    cs = Collatz_seq()
+    cs_max = 0
+    cs_number = 0
+    cs_dict = {}
+    for i in range(2, n):
+        cs.set_n(i)
+        while not cs.is_term():
+            cs.next()
+            if cs_dict.has_key(cs.get_n()):
+                cs.set_sum(cs.get_sum() + cs_dict[cs.get_n()])
+                break
+        if cs.is_term():
+            cs_dict[i] = cs.get_sum()
+
+        if cs.get_sum() > cs_max:
+            cs_max = cs.get_sum()
+            cs_number = i
+            print cs_max
+            print cs_number
+
+find_max_Collatz_seq(1000000)
