@@ -7,8 +7,6 @@ If p is the perimeter of a right angle triangle with integral length sides, {a,b
 
 For which value of p ≤ 1000, is the number of solutions maximised?
 """
-
-
 def find_max_right_angle_triangle_solutions(n):
     p = 2
     t_max = 0
