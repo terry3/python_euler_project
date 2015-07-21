@@ -38,6 +38,10 @@ def get_prime(n=6):
         re = p.next()
     return re
 
-begin = time.time()
-print get_prime(n=10001)
-print time.time() - begin,"(s)"
+
+
+def exec_main():
+    print get_prime(n=10001)
+
+if __name__ == '__main__':
+    exec_main()

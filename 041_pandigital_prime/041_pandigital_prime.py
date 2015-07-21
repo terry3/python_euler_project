@@ -67,4 +67,9 @@ def find_max_pandigital_prime():
             ret = tmp
             print tmp
     return ret
-print find_max_pandigital_prime()
+
+def exec_main():
+    print find_max_pandigital_prime()
+
+if __name__ == '__main__':
+    exec_main()

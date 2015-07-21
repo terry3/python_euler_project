@@ -56,5 +56,10 @@ def calc_product_of_couious_fraction(x, y):
             return [x, y]
             break
 
-x, y = find_courious_fraction()
-print calc_product_of_couious_fraction(x, y)
+
+def exec_main():
+    x, y = find_courious_fraction()
+    print calc_product_of_couious_fraction(x, y)
+
+if __name__ == '__main__':
+    exec_main()

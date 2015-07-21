@@ -18,8 +18,6 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 HASH TABLE!!!
 """
 import sys
-sys.path.append("..")
-from t_base import exec_time
 
 class Collatz_seq:
     def __init__(self):
@@ -55,7 +53,6 @@ class Collatz_seq:
     def is_odd(self):
         return self.n % 2 != 0
 
-@exec_time
 def find_max_Collatz_seq(n=13):
     cs = Collatz_seq()
     cs_max = 0
@@ -70,4 +67,9 @@ def find_max_Collatz_seq(n=13):
             print cs_max
             print cs_number
 
-find_max_Collatz_seq(1000000)
+
+def exec_main():
+    find_max_Collatz_seq(1000000)
+
+if __name__ == '__main__':
+    exec_main()

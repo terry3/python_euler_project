@@ -46,5 +46,11 @@ def calc_digit_char_count():
         t_unit += 1
     return t_sum + len("one thousand")
 
-print "wrong answer."
-print calc_digit_char_count()
+
+def exec_main():
+    print "wrong answer."
+    print calc_digit_char_count()
+
+if __name__ == '__main__':
+    exec_main()
+

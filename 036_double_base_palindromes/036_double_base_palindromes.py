@@ -25,4 +25,9 @@ def find_all_palindromic_number_in_2_10(n=1000):
             sum += var
     return sum
 
-print find_all_palindromic_number_in_2_10(n=1000000)
+
+def exec_main():
+    print find_all_palindromic_number_in_2_10(n=1000000)
+
+if __name__ == '__main__':
+    exec_main()

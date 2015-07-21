@@ -8,10 +8,12 @@ For example, when the list is sorted into alphabetical order, COLIN, which is wo
 What is the total of all the name scores in the file?
 """
 
+import os
+
 def calc_names_scores():
     t_index = 0
     t_ret = 0
-    name_file = open("p022_names.txt")
+    name_file = open("022_names_scores/p022_names.txt")
     name_list = name_file.read().split(',')
     name_file.close()
     name_list.sort()            # sort the list
@@ -24,4 +26,5 @@ def calc_names_scores():
         t_ret += t_sum
     return t_ret
 
-print calc_names_scores()
+def exec_main():
+    print calc_names_scores()

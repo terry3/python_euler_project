@@ -126,5 +126,10 @@ def calc_point_product(max_x, max_y):
             tmp = calc_chk_max(tmp, calc_point_right_down(x, y))
     print tmp
 
-gene_s_list(ori_string=ori_string)
-calc_point_product(MAX_WIDTH, MAX_HIGH)
+
+def exec_main():
+    gene_s_list(ori_string=ori_string)
+    calc_point_product(MAX_WIDTH, MAX_HIGH)
+
+if __name__ == '__main__':
+    exec_main()

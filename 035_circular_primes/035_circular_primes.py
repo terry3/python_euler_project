@@ -74,9 +74,14 @@ def find_circular_primes(n_in=100):
     while n < n_in:
         n = dp.next()
         if is_rotate_also_prime(n):
-            print n
+            # print n
             sum += 1
 
     return sum + 1              # add the 2
 
-print find_circular_primes(n_in=1000000)
+
+def exec_main():
+    print find_circular_primes(n_in=1000000)
+
+if __name__ == '__main__':
+    exec_main()

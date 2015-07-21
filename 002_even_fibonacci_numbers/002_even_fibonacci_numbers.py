@@ -35,5 +35,9 @@ def find_fibo(max = 10):
         re = fibo.next()
     return sum
 
-print find_fibo(four_m)
+def exec_main():
+    print find_fibo(four_m)
+
+if __name__ == '__main__':
+    exec_main()
 

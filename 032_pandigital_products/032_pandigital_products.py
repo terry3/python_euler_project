@@ -8,10 +8,6 @@ The product 7254 is unusual, as the identity, 39 × 186 = 7254, containing multi
 Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
 HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 """
-import sys
-sys.path.append("..")
-from t_base import exec_time
-
 
 def is_pandigital_string(d_str):
     if len(d_str) != 9:
@@ -20,7 +16,7 @@ def is_pandigital_string(d_str):
         if 1 != d_str.count(str(var)):
             return False
     return True
-@exec_time
+
 def find_all_pandigital_string():
     sum_list = []
     sum = 0
@@ -41,4 +37,9 @@ def find_all_pandigital_string():
         sum += var
     return sum
 
-print find_all_pandigital_string()
+
+def exec_main():
+    print find_all_pandigital_string()
+
+if __name__ == '__main__':
+    exec_main()

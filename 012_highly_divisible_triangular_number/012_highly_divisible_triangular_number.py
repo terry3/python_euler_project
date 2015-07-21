@@ -44,6 +44,9 @@ def find_triangualr_number_first_over_n_divisors(n=5):
             break
     print tri_number
 
-begin = time.time()
-find_triangualr_number_first_over_n_divisors(n=500)
-print time.time() - begin
+
+def exec_main():
+    find_triangualr_number_first_over_n_divisors(n=500)
+
+if __name__ == '__main__':
+    exec_main()

@@ -54,4 +54,9 @@ def find_max_creep_number():
         n += 1
     return t_max
 
-print find_max_creep_number()
+
+def exec_main():
+    print find_max_creep_number()
+
+if __name__ == '__main__':
+    exec_main()

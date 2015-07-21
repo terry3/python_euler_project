@@ -37,4 +37,9 @@ def calc_sundays_on_the_first_of_month(begin_y=1901, end_y=2000):
                 t_ret += 1
     return t_ret
 
-print calc_sundays_on_the_first_of_month()
+
+def exec_main():
+    print calc_sundays_on_the_first_of_month()
+
+if __name__ == '__main__':
+    exec_main()

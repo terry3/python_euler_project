@@ -51,6 +51,11 @@ def find_largest_prime(number = 15):
             relist.append(prime)
             t_number = t_number / prime
 
-find_largest_prime(number)
-relist.sort()
-print relist[-1]
+
+def exec_main():
+    find_largest_prime(number)
+    relist.sort()
+    print relist[-1]
+
+if __name__ == '__main__':
+    exec_main()

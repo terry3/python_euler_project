@@ -1,0 +1,6 @@
+# name: if __name__ == main
+# key: ifmain
+# group : control structure
+# --
+if __name__ == '__main__':
+   $0

@@ -84,8 +84,12 @@ list.append({})
 list.append({})
 list[1][1] = 1
 
-generate_list()
-analyse_list()
-# print list
-# print target_dict
-print calculate_dict()
+def exec_main():
+    generate_list()
+    analyse_list()
+    # print list
+    # print target_dict
+    print calculate_dict()
+
+if __name__ == '__main__':
+    exec_main()

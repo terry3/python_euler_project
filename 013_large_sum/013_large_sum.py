@@ -119,3 +119,5 @@ def calc_large_sum():
 def exec_main():
     calc_large_sum()
 
+if __name__ == '__main__':
+    exec_main()

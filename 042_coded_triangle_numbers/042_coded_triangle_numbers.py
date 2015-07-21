@@ -29,7 +29,7 @@ def calc_string_number(d_str):
     return sum
 
 def calc_triangle_string():
-    words_file = open("p042_words.txt", "r")
+    words_file = open("./042_coded_triangle_numbers/p042_words.txt", "r")
     text = words_file.read().split(',')
     words_file.close()
     sum = 0
@@ -38,5 +38,9 @@ def calc_triangle_string():
         if is_triangle_number(word_number):
             sum += 1
     return sum
-print calc_triangle_string()
 
+def exec_main():
+    print calc_triangle_string()
+
+if __name__ == '__main__':
+    exec_main()

@@ -22,4 +22,9 @@ def combination_x_y(x=1, y=1):
     sum_z = factorial(abs(x-y))
     return int(sum_x / (sum_z * sum_y))
 
-print combination_x_y(40, 20)
+
+def exec_main():
+    print combination_x_y(40, 20)
+
+if __name__ == '__main__':
+    exec_main()

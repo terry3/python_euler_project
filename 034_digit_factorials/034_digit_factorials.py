@@ -7,9 +7,6 @@ Find the sum of all numbers which are equal to the sum of the factorial of their
 
 Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 """
-import sys
-sys.path.append("..")
-from t_base import exec_time
 
 df_list =[]
 
@@ -26,7 +23,6 @@ def factorial_init(n):
     for var in range(0, n):
         df_list.append(factorial_ret(var))
 
-@exec_time
 def find_another_courious_num():
     n = 10
     str_n = ""
@@ -47,5 +43,10 @@ def find_another_courious_num():
         n += 1
     return ret_sum
 
-# print factorial_ret(9)
-print find_another_courious_num()
+
+def exec_main():
+    # print factorial_ret(9)
+    print find_another_courious_num()
+
+if __name__ == '__main__':
+    exec_main()

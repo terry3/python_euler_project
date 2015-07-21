@@ -41,6 +41,10 @@ def get_prime_sum(n=10):
     return re
 sum = 2000000
 
-begin = time.time()
-print get_prime_sum(n=sum) + 2
-print time.time() - begin
+
+
+def exec_main():
+    print get_prime_sum(n=sum) + 2
+
+if __name__ == '__main__':
+    exec_main()

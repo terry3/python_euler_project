@@ -77,4 +77,9 @@ def find_max(des, n=4):
         begin += 1
     return t_max, t_l
 
-print find_max(string, 13)
+
+def exec_main():
+    print find_max(string, 13)
+
+if __name__ == '__main__':
+    exec_main()

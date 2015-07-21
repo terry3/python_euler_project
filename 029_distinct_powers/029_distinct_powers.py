@@ -25,4 +25,9 @@ def calc_distinct_powers(a=5, b=5):
     d_set = set(d_list)
     return len(d_set)
 
-print calc_distinct_powers(a=100, b=100)
+
+def exec_main():
+    print calc_distinct_powers(a=100, b=100)
+
+if __name__ == '__main__':
+    exec_main()

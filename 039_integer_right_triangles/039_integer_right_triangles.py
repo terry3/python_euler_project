@@ -26,4 +26,9 @@ def find_max_right_angle_triangle_solutions(n):
         p += 2                  # p always even
     return t_p
 
-print find_max_right_angle_triangle_solutions(n=1000)
+
+def exec_main():
+    print find_max_right_angle_triangle_solutions(n=1000)
+
+if __name__ == '__main__':
+    exec_main()

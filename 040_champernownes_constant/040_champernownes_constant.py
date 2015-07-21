@@ -35,4 +35,9 @@ def find_n_th_value(n):
 
 init()
 
-print find_n_th_value(1) * find_n_th_value(10) * find_n_th_value(100) * find_n_th_value(1000) * find_n_th_value(10000) * find_n_th_value(100000) * find_n_th_value(1000000)
+
+def exec_main():
+    print find_n_th_value(1) * find_n_th_value(10) * find_n_th_value(100) * find_n_th_value(1000) * find_n_th_value(10000) * find_n_th_value(100000) * find_n_th_value(1000000)
+
+if __name__ == '__main__':
+    exec_main()

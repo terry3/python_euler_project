@@ -19,8 +19,11 @@ def generate_multiples(number=2, max=1000):
         sum += t_max
     return sum
 
-m3 = generate_multiples(number=3)
-m5 = generate_multiples(number=5)
-m15 = generate_multiples(number=15)
+def exec_main():
+    m3 = generate_multiples(number=3)
+    m5 = generate_multiples(number=5)
+    m15 = generate_multiples(number=15)
+    print m3+m5-m15
 
-print m3+m5-m15
+if __name__ == '__main__':
+    exec_main()

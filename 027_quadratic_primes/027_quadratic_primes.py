@@ -83,4 +83,9 @@ def find_quadratic_primes_result(ni=39):
                 n += 1
     print t_max, t_x, t_y, t_x * t_y
 
-find_quadratic_primes_result()
+
+def exec_main():
+    find_quadratic_primes_result()
+
+if __name__ == '__main__':
+    exec_main()

@@ -11,10 +11,6 @@ It is possible to make £2 in the following way:
 
 How many different ways can £2 be made using any number of coins?
 """
-import sys
-sys.path.append("..")
-from t_base import exec_time
-
 
 d_list = [200, 100, 40, 20, 10, 4,  2,   1]
 n_list = [2,   5,  10, 20, 50, 100]
@@ -27,7 +23,6 @@ def calc_conis_list(run_list):
         ret += run_list[var] * n_list[var]
     return ret <= 200
 
-@exec_time
 def calc_combination_conis():
     sum = 0
     for x_1 in range(0, it_list[1]):
@@ -49,5 +44,9 @@ def calc_combination_conis():
 
     return sum
 
-print calc_combination_conis() + 7 # add the 7 all-same number
 
+def exec_main():
+    print calc_combination_conis() + 7 # add the 7 all-same number
+
+if __name__ == '__main__':
+    exec_main()

@@ -44,6 +44,11 @@ def find_1000_digit_fib_index():
         pass
     return fib.index
 
-print find_1000_digit_fib_index()
+
+def exec_main():
+    print find_1000_digit_fib_index()
+
+if __name__ == '__main__':
+    exec_main()
 
 

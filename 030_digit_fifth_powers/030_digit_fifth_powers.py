@@ -40,4 +40,9 @@ def find_max_sum_fifth_powers():
             sum += var
     return sum
 
-print find_max_sum_fifth_powers()
+
+def exec_main():
+    print find_max_sum_fifth_powers()
+
+if __name__ == '__main__':
+    exec_main()

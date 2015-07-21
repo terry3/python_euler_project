@@ -20,6 +20,10 @@ def find_pythagorean_triplet(max=12):
                 print a, b, (max - a - b)
                 print a*b*(max - a - b)
 
-find_pythagorean_triplet(max=sum);
 
 
+def exec_main():
+    find_pythagorean_triplet(max=sum);
+
+if __name__ == '__main__':
+    exec_main()

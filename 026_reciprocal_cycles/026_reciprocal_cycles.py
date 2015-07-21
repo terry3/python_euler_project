@@ -50,4 +50,9 @@ def find_max_curring_cycles(n=10):
             t_num = var
     print t_num, t_max, t_strr
 
-find_max_curring_cycles(n=1000)
+
+def exec_main():
+    find_max_curring_cycles(n=1000)
+
+if __name__ == '__main__':
+    exec_main()

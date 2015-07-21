@@ -23,4 +23,9 @@ def find_max_p_number(number=998):
                 return [a, n/a, n]
             a += 1
         number -= 1
-print find_max_p_number(ln)
+
+def exec_main():
+    print find_max_p_number(ln)
+
+if __name__ == '__main__':
+    exec_main()

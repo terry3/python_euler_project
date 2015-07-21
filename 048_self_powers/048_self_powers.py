@@ -11,4 +11,9 @@ def calc_self_powers(n):
         n -= 1
     return sum
 
-print str(calc_self_powers(1000))[-10:]
+
+def exec_main():
+    print str(calc_self_powers(1000))[-10:]
+
+if __name__ == '__main__':
+    exec_main()

@@ -26,4 +26,9 @@ def get_sum(n=10):
 
     return sum
 
-print get_sum(n=n)
+
+def exec_main():
+    print get_sum(n=n)
+
+if __name__ == '__main__':
+    exec_main()

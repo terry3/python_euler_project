@@ -25,4 +25,9 @@ def calc_factorial_digit_sum(n=100):
 
     return t_ret
 
-print calc_factorial_digit_sum()
+
+def exec_main():
+    print calc_factorial_digit_sum()
+
+if __name__ == '__main__':
+    exec_main()

@@ -80,4 +80,9 @@ def find_all_truncate_prime(n=3):
             find_n += 1
     return sum
 
-print find_all_truncate_prime(n=11)
+
+def exec_main():
+    print find_all_truncate_prime(n=11)
+
+if __name__ == '__main__':
+    exec_main()

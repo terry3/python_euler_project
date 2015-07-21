@@ -35,4 +35,9 @@ def calc_diagonals(n=5):
         t_n += 2
     print t_sum
 
-calc_diagonals(n=1001)
+
+def exec_main():
+    calc_diagonals(n=1001)
+
+if __name__ == '__main__':
+    exec_main()

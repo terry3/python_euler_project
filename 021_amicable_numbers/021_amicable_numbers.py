@@ -42,4 +42,9 @@ def find_amicable_numbers(n=10000):
         t_ret += var
     return t_ret
 
-print find_amicable_numbers()
+
+def exec_main():
+    print find_amicable_numbers()
+
+if __name__ == '__main__':
+    exec_main()
