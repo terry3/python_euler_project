@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-just base.
+wrapper for print program execute time.
 """
 
 def exec_time(func):
