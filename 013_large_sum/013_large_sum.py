@@ -106,11 +106,16 @@ orig_string = "37107287533902102798797998220837590246510135740250\n\
 53503534226472524250874054075591789781264330331690\n\
 "
 orig_list = orig_string.split('\n')
-ret = 0
-for number in orig_list:
-    # print "h", number
-    if number.strip():
-        ret += int(number)
-
-print str(ret)[0:10]
 # print orig_list
+
+def calc_large_sum():
+    ret = 0
+    for number in orig_list:
+        # print "h", number
+        if number.strip():
+            ret += int(number)
+    print str(ret)[0:10]
+
+def exec_main():
+    calc_large_sum()
+
