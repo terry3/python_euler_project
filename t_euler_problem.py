@@ -11,8 +11,8 @@ from os.path import isdir, join
 
 target_dir = "./"
 
-
 def find_and_figure_out_problem():
+    t_exec_flag = False
     for argv_index in range(1, len(sys.argv)):
         # print sys.argv[argv_index]
         problem_str = sys.argv[argv_index]
@@ -29,8 +29,15 @@ def find_and_figure_out_problem():
             match = pattern.match(dir_name)
             if match:
                 # print find_str
+                t_exec_flag = True
                 print dir_name
                 mo = importlib.import_module(dir_name + '.' + dir_name)
                 mo.exec_main()
+        if not t_exec_flag:
+            print "Not solved."
 
-find_and_figure_out_problem()
+def exec_main():
+    find_and_figure_out_problem()
+
+if __name__ == '__main__':
+    exec_main()
