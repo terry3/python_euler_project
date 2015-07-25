@@ -1,0 +1,46 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+There are exactly ten ways of selecting three from five, 12345:
+
+123, 124, 125, 134, 135, 145, 234, 235, 245, and 345
+
+In combinatorics, we use the notation, 5C3 = 10.
+
+In general,
+nCr =
+n!
+r!(n−r)!
+	,where r ≤ n, n! = n×(n−1)×...×3×2×1, and 0! = 1.
+
+It is not until n = 23, that a value exceeds one-million: 23C10 = 1144066.
+
+How many, not necessarily distinct, values of  nCr, for 1 ≤ n ≤ 100, are greater than one-million?
+"""
+import sys
+sys.path.append("./000_misc")
+from t_factorial import calc_factorial
+
+t_target = 1000000
+
+def calc_combination_C_x_y(x, y):
+    t_high = calc_factorial(x)
+    t_low   = calc_factorial(y) * calc_factorial(x - y)
+    return int(t_high / t_low)
+
+def find_values_greater_than_n(n=t_target):
+    t_value = 0
+    t_sum = 0
+    for high in range(1, 101):
+        for low in range(1, high):
+            t_value = calc_combination_C_x_y(high, low)
+            if t_value > n:
+                t_sum += 1
+
+    return t_sum
+
+def exec_main():
+    print find_values_greater_than_n(n=1000000)
+
+if __name__ == '__main__':
+    exec_main()
