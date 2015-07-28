@@ -31,9 +31,9 @@ def exec_iteration(t_input, n=50):
         t_tmp_int = reverse_int(t_input)
         t_tmp_sum = t_tmp_int + t_input
         if is_palindromic(str(t_tmp_sum)):
-            return True
+            return False
         t_input = t_tmp_sum
-    return False
+    return True
 
 def calc_how_many_lychrel_number(n):
     t_sum = 0
@@ -47,4 +47,3 @@ def exec_main():
 
 if __name__ == '__main__':
     exec_main()
-
