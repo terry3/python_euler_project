@@ -47,7 +47,7 @@ def calc_spiral_primes(n):
             t_prime += 1
         t_sum += 4
         # print t_prime, t_sum, t_index
-        print float(t_prime) / t_sum
+        # print float(t_prime) / t_sum
         if float(t_prime) / t_sum < 0.1:
             return t_index
         t_index += 2
