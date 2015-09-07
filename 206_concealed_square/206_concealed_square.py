@@ -28,7 +28,7 @@ def find_that_number():
     return 0
 
 def exec_main():
-    print "quit slowly, but worked."
+    print "quite slowly, but worked."
     print find_that_number()
     # is_ended_with_89()
 
