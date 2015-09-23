@@ -30,7 +30,6 @@ def find_that_number():
 def exec_main():
     print "quite slowly, but worked."
     print find_that_number()
-    # is_ended_with_89()
 
 if __name__ == '__main__':
     exec_main()
